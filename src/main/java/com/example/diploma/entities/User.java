@@ -1,14 +1,12 @@
 package com.example.diploma.entities;
 
-import com.example.diploma.entities.utility.LanguageLevel;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
-import lombok.Value;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
+import java.util.Set;
 
 @Data
 @RequiredArgsConstructor
@@ -30,8 +28,8 @@ public class User {
     String lastName;
     @Column(name = "createdAt")
     Date createdAt;
-    @OneToMany
-    List<LanguageLevel> languagesSpeaks;
+    @ElementCollection
+    Set<LanguageLevel> languagesSpeaks;
     @Column(name = "nationality")
     String nationality;
     @Column(name = "location")

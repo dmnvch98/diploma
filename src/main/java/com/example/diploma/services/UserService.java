@@ -15,4 +15,8 @@ public class UserService {
     public void save(User user) {
         userRepository.save(user);
     }
+
+    public User getUser(final long id) {
+        return userRepository.findById(id).orElse(null);
+    }
 }

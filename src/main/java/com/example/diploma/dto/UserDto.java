@@ -1,6 +1,6 @@
 package com.example.diploma.dto;
 
-import com.example.diploma.entities.utility.LanguageLevel;
+import com.example.diploma.entities.LanguageLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

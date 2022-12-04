@@ -1,13 +1,15 @@
 package com.example.diploma.entities;
 
-import com.example.diploma.entities.utility.Language;
-import com.example.diploma.entities.utility.LessonType;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
+@Data
+@RequiredArgsConstructor
 public class Lesson {
     Tutor tutor;
     Student student;
-    Language language;
-    LessonType lessonType;
+    int lessonTypeId;
+    int languageId;
     String location;
     float price;
 }
